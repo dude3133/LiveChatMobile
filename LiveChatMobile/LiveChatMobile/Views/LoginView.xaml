@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:LiveChatMobile.ViewModels;assembly=LiveChatMobile"
+             x:Class="LiveChatMobile.Views.LoginView">
+  <ContentPage.BindingContext>
+    <vm:LoginViewModel/>
+  </ContentPage.BindingContext>
+  <StackLayout Padding="20" Spacing="12" VerticalOptions="Center" HorizontalOptions="Fill">
+    <Entry Text="{Binding Username}" Placeholder="Username" HorizontalOptions="Fill"/>
+    <Entry IsPassword="True" Text="{Binding Password}" Placeholder="Password" VerticalOptions="Center" HorizontalOptions="Fill"/>
+    <Button Command="{Binding LoginCommand}" Text="Login"/>
+  </StackLayout>
+</ContentPage>
